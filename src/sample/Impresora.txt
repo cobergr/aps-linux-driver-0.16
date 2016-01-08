@@ -1,0 +1,12 @@
+#include "Impresora.h"
+#include <string.h>
+ 
+ JNIEXPORT jstring JNICALL Java_Impresora_stringMethod
+   (JNIEnv *env, jobject obj, jstring string) {
+    const char *str = env->GetStringUTFChars(string, 0);
+     char cap[128];
+     strcpy(cap, str);
+     env->ReleaseStringUTFChars(string, str);
+     return env->NewStringUTF(strupr(cap));
+ }
+void main(){}

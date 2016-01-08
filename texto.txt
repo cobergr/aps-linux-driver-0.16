@@ -1,0 +1,124 @@
+src/aps/ethernet.c: * DESCRIPTION   : APS library - ethernet communication routines
+src/aps/ethernet.c:    len = snprintf(uri,size,"aps:%s?type=ethernet+port=%s",
+src/aps/ethernet.c:    printf("Device node:%s\n",node);
+src/aps/ethernet.c:                    tv.tv_usec = (p->write_timeout%1000)*1000;
+src/aps/ethernet.c:            tv.tv_usec = (p->write_timeout%1000)*1000;
+src/aps/ethernet.c:            tv.tv_usec = (p->read_timeout%1000)*1000;
+src/aps/serial.c:* DESCRIPTION   : APS library - serial communication routines
+src/aps/serial.c:        len = snprintf(uri,size,"aps:%s?type=serial+baudrate=%s+handshake=%s",
+src/aps/serial.c:    if (sscanf(buf.release,"%d.%d.%d",&a,&b,&c)!=3) {
+src/aps/serial.c:                        tv.tv_usec = (p->write_timeout%1000)*1000;
+src/aps/serial.c:                        tv.tv_usec = (p->read_timeout%1000)*1000;
+src/aps/serial.c:                timer.it_value.tv_usec = (p->write_timeout%1000)*1000;
+src/aps/models.c:* DESCRIPTION   : APS library - models database
+src/aps/models.def:* DESCRIPTION   : APS library - definition of printers models
+Coincidencia en el fichero binario src/aps/aps.o
+src/aps/uri.c:* DESCRIPTION   : APS library - Uniform Resource Identifier routines
+src/aps/uri.c:        len = snprintf(uri,size,"aps:%s",su->device);
+src/aps/uri.c:                        format = "?%s=%s";
+src/aps/uri.c:                        format = "+%s=%s";
+Coincidencia en el fichero binario src/aps/serial.o
+src/aps/testdetect.c:* DESCRIPTION   : Test program for automatic printers detection
+src/aps/testdetect.c:#define ESC     27
+src/aps/testdetect.c:        printf("Printer serial settings = 0x%02X\n",set);
+src/aps/testdetect.c:        printf("%d printer(s) found\n",n);
+src/aps/testdetect.c:                printf("printers[%d].model = %d\n",i,printers[i].model);
+src/aps/testdetect.c:                printf("printers[%d].identity = %s\n",i,printers[i].identity);
+src/aps/testdetect.c:                printf("printers[%d].uri = %s\n",i,printers[i].uri);
+src/aps/testdetect.c:        printf("testdetect compiled with APS library %d.%d.%d\n",
+Coincidencia en el fichero binario src/aps/detect.o
+src/aps/usb.c.save: * DESCRIPTION   : APS library - USB communication routines
+src/aps/usb.c.save:	printf("open %s\n",device);
+src/aps/usb.c.save:	printf("ioctl %s\n",device);
+src/aps/usb.c.save:	printf("create %s\n",device);
+src/aps/usb.c.save:	printf("printer at bus: %i\n", libusb_get_bus_number(dev));
+src/aps/usb.c.save:	printf("printer at address: %i\n", libusb_get_device_address(dev));
+src/aps/usb.c.save:	fprintf(stderr, "DEBUG: in %s()\n", __func__);
+src/aps/usb.c.save:	if (sscanf(vidstr,"%i",&vid)!=1) {
+src/aps/usb.c.save:	if (sscanf(pidstr,"%i",&pid)!=1) {
+src/aps/usb.c.save:	printf("DEBUG: vid=%i pid=%i\n",vid, pid); 
+src/aps/usb.c.save:		printf("DEBUG: desc.idVendor=%i desc.idProduct=%i\n", desc.idVendor, desc.idProduct);
+src/aps/usb.c.save:	fprintf(stderr, "DEBUG: printer at bus: %i\n", libusb_get_bus_number(dev));
+src/aps/usb.c.save:	fprintf(stderr, "DEBUG: printer at address: %i\n", libusb_get_device_address(dev));
+src/aps/usb.c.save:	printf("Device:%s\n",device);
+src/aps/usb.c.save:		if (sscanf(vidstr,"%i",&vid)!=1) {
+src/aps/usb.c.save:		if (sscanf(pidstr,"%i",&pid)!=1) {
+src/aps/usb.c.save:	fprintf(stderr, "DEBUG: in %s()\n", __func__);
+src/aps/usb.c.save:	fprintf(stderr, "DEBUG: printer at bus: %i\n", libusb_get_bus_number(dev));
+src/aps/usb.c.save:	fprintf(stderr, "DEBUG: printer at address: %i\n", libusb_get_device_address(dev));
+src/aps/usb.c.save:		len = snprintf(uri,size,"aps:/dev/bus/usb?type=usb+vid=%i+pid=%i",
+src/aps/aps-private.h: * DESCRIPTION   : APS library - private definitions
+src/aps/aps-private.h:		ESC     = 27,
+Coincidencia en el fichero binario src/aps/testdetect
+Coincidencia en el fichero binario src/aps/parallel.o
+src/aps/usb.c: * DESCRIPTION   : APS library - USB communication routines
+src/aps/usb.c:	printf("open %s\n",device);
+src/aps/usb.c:	printf("ioctl %s\n",device);
+src/aps/usb.c:	printf("create %s\n",device);
+src/aps/usb.c:	printf("printer at bus: %i\n", libusb_get_bus_number(dev));
+src/aps/usb.c:	printf("printer at address: %i\n", libusb_get_device_address(dev));
+src/aps/usb.c:	fprintf(stderr, "DEBUG: in %s()\n", __func__);
+src/aps/usb.c:	if (sscanf(vidstr,"%i",&vid)!=1) {
+src/aps/usb.c:	if (sscanf(pidstr,"%i",&pid)!=1) {
+src/aps/usb.c:	printf("DEBUG: vid=%i pid=%i\n",vid, pid); 
+src/aps/usb.c:		printf("DEBUG: desc.idVendor=%i desc.idProduct=%i\n", desc.idVendor, desc.idProduct);
+src/aps/usb.c:	fprintf(stderr, "DEBUG: printer at bus: %i\n", libusb_get_bus_number(dev));
+src/aps/usb.c:	fprintf(stderr, "DEBUG: printer at address: %i\n", libusb_get_device_address(dev));
+src/aps/usb.c:	printf("Device:%s\n",device);
+src/aps/usb.c:		if (sscanf(vidstr,"%i",&vid)!=1) {
+src/aps/usb.c:		if (sscanf(pidstr,"%i",&pid)!=1) {
+src/aps/usb.c:	fprintf(stderr, "DEBUG: in %s()\n", __func__);
+src/aps/usb.c:	fprintf(stderr, "DEBUG: printer at bus: %i\n", libusb_get_bus_number(dev));
+src/aps/usb.c:	fprintf(stderr, "DEBUG: printer at address: %i\n", libusb_get_device_address(dev));
+Coincidencia en el fichero binario src/aps/ethernet.o
+src/aps/aps.c: * DESCRIPTION   : APS library - exported functions
+Coincidencia en el fichero binario src/aps/getstatus
+Coincidencia en el fichero binario src/aps/libaps.a
+src/aps/version.def:* DESCRIPTION   : APS library - version information
+src/aps/aps.h:* DESCRIPTION   : APS library header file
+src/aps/parallel.c:* DESCRIPTION   : APS library - parallel communication routines
+src/aps/parallel.c:        timer.it_value.tv_usec = (timeout%1000)*1000;
+src/aps/parallel.c:        len = snprintf(uri,size,"aps:%s?type=parallel+mode=%s",
+Coincidencia en el fichero binario src/aps/testaps
+Coincidencia en el fichero binario src/aps/models.o
+src/aps/version.h:* DESCRIPTION   : APS Library - version information and support macros
+src/aps/detect.c:* DESCRIPTION   : APS library - printers autodetection
+src/aps/detect.c:        {2, {ESC, 'v'}},
+src/aps/detect.c:        {2, {ESC, 'I'}}
+src/aps/detect.c:/*ESC/POS commands set: HSP*/
+src/aps/detect.c:		printf("printer returned model string: %s\n", identity);
+src/aps/detect.c:                unsigned char buf[] = {ESC, GS, 'B'};
+src/aps/detect.c:                snprintf(device,sizeof(device),"/dev/ttyS%d",i);
+src/aps/detect.c:        snprintf(s,sizeof(s),"/proc/sys/dev/parport/parport%d/irq",n);
+src/aps/detect.c:        if (fscanf(f,"%d",&irq)!=1) {
+src/aps/detect.c:                snprintf(device,sizeof(device),"/dev/parport%d",i);
+src/aps/detect.c:                    printf("DEBUG: port:%s\n",buf);
+src/aps/detect.c:                    printf("DEBUG: model:%d\n",model);
+src/aps/getstatus.c:* DESCRIPTION   : Retrieve status from APS printer and print to stdout
+src/aps/getstatus.c:#define ESC     27
+src/aps/getstatus.c:static const unsigned char cmd_get_status_aps[] = {ESC,'v'};
+src/aps/getstatus.c:static const unsigned char cmd_get_neop_status_aps[] = {ESC,'n','s'};
+src/aps/getstatus.c:                        fprintf(stderr,"clean: %s\n",aps_get_strerror_full(errnum,port));
+src/aps/getstatus.c:                        fprintf(stderr,"clean: %s\n",aps_get_strerror_full(errnum,port));
+src/aps/getstatus.c:                        fprintf(stderr,"clean: %s\n",aps_get_strerror_full(errnum,port));
+src/aps/getstatus.c:                fprintf(stderr,"check: %s\n",aps_strerror(errnum));
+src/aps/getstatus.c:                                fprintf(stderr,"parse_options: invalid model type (%s)\n",argv[i]);
+src/aps/getstatus.c:                        fprintf(stderr,"parse_options: unrecognized option (%s)\n",argv[i]);
+src/aps/getstatus.c:                printf("getstatus compiled with APS library %d.%d.%d\n",
+src/aps/Makefile:%.o: %.c aps.h aps-private.h
+Coincidencia en el fichero binario src/aps/uri.o
+Coincidencia en el fichero binario src/aps/usb.o
+src/aps/testaps.c:* DESCRIPTION   : Test program for APS library
+src/aps/testaps.c:#define ESC     27
+src/aps/testaps.c:static const unsigned char cmd_get_identity[] = {ESC,'I'};
+src/aps/testaps.c:                        fprintf(stderr,"clean: %s\n",aps_get_strerror_full(errnum,port));
+src/aps/testaps.c:                        fprintf(stderr,"clean: %s\n",aps_get_strerror_full(errnum,port));
+src/aps/testaps.c:                        fprintf(stderr,"clean: %s\n",aps_get_strerror_full(errnum,port));
+src/aps/testaps.c:                fprintf(stderr,"check: %s\n",aps_get_strerror_full(errnum,port));
+src/aps/testaps.c:                                fprintf(stderr,"parse_options: invalid model type (%s)\n",argv[i]);
+src/aps/testaps.c:                        fprintf(stderr,"parse_options: unrecognized option (%s)\n",argv[i]);
+src/aps/testaps.c:        printf("identity=%s\n",identity);
+src/aps/testaps.c:                sprintf(line,"line %d: ABCDEFGHIJKLMNOPQRSTUVWXYZ\n",i);
+src/aps/testaps.c:        printf("current serial baudrate=%d\n",aps_serial_get_baudrate(port));
+src/aps/testaps.c:        printf("current serial handshake=%d\n",aps_serial_get_handshake(port));
+src/aps/testaps.c:                printf("testaps compiled with APS library %d.%d.%d\n",

@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#include <aps/aps.h>
+static const char ticket[] = "\nHello world! GIVINN";
+static void error(const char *s)
+{
+        fprintf(stderr,"error: %s\n",s);
+        exit(1);
+}
+int main(int argc,char** argv)
+{
+        void *port;
+        int errnum;
+
+        /*if (argc<2) {
+                printf("usage: sample2 uri\n");
+                return 0;
+        }*/
+	argv[1]="aps:/proc/bus/usb?type=usb+vid=0+pid=0";
+
+        /* create communication port from URI */
+        port = aps_create_port(argv[1]);
+
+        if (port==NULL) {
+                error("cannot create port");
+        }
+        else if ((errnum = aps_get_error(port))<0) {
+                error(aps_strerror(errnum));
+        }
+
+        /* open communication port */
+        if ((errnum = aps_open(port))<0) {
+                error(aps_strerror(errnum));
+        }
+
+        /* write to communication port */
+
+        if ((errnum = aps_write(port,ticket,sizeof(ticket)-1))<0) {
+                error(aps_strerror(errnum))
+
+}
+
+        /* close communication port */
+        if ((errnum = aps_close(port))<0) {
+                error(aps_strerror(errnum));
+        }
+
+        /* destroy communication port */
+        if ((errnum = aps_destroy_port(port))<0) {
+                error(aps_strerror(errnum));
+        }
+        return 0;
+}
+
